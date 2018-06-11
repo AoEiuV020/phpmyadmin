@@ -511,7 +511,7 @@ function PMA_auth_set_user()
         if ($GLOBALS['cfg']['AllowArbitraryServer']) {
             if (! empty($GLOBALS['pma_auth_server'])) {
                 // Duration = one month for servername
-                $GLOBALS['PMA_Config']->setCookie('pmaServer-' . $GLOBALS['server'], $cfg['Server']['host']);
+                $GLOBALS['PMA_Config']->setCookie('pmaServer-' . $GLOBALS['server'], $cfg['Server']['host'].' '.$cfg['Server']['port']);
             } else {
                 // Delete servername cookie
                 $GLOBALS['PMA_Config']->removeCookie('pmaServer-' . $GLOBALS['server']);
