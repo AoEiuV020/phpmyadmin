@@ -123,7 +123,7 @@ function PMA_auth()
         $autocomplete   = '';
     } else {
         $default_user   = '';
-        $default_server = '';
+        $default_server = '127.0.0.1';
         // skip the IE autocomplete feature.
         $autocomplete   = ' autocomplete="off"';
     }
